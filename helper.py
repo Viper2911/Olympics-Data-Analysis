@@ -1,5 +1,4 @@
 import numpy as np
-
 def fetch_medal_tally(df, year, country):
     medal_df = df.drop_duplicates(subset=['Team', 'NOC', 'Games', 'Year', 'City', 'Sport', 'Event', 'Medal'])
     flag = 0
@@ -112,4 +111,5 @@ def men_vs_women(df):
     final.rename(columns={'Name_x':'Male','Name_y':'Female'})
     
     final.fillna(0,inplace=True)
+
     return final
